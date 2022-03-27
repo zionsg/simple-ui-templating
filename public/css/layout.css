@@ -1,0 +1,75 @@
+/**
+ * CSS for layout in entire application
+ *
+ * Prescribed format/ordering of CSS:
+ *   - With the exception of "Containers" which is placed first, sections
+ *     should be ordered alphabetically for easier searching.
+ *   - Begin and end each section with comments containing the section name,
+ *     e.g. Forms, Navigation, etc.
+ *   - Within each section, the rules (selector + declaration group) should be
+ *     ordered according to CSS specificity with type selectors (e.g. div)
+ *     first, followed by class selectors (e.g. .example), and lastly ID
+ *     selectors (e.g. #test).
+ *   - Within each rule, order the properties alphabetically, e.g. font-family
+ *     before font-size, height before width, etc.
+ *   - In view of accessiblity and zooming, try to use em or rem instead of px,
+ *     especially for typography. See
+ *     https://chiamakaikeanyi.dev/sizing-in-css-px-vs-em-vs-rem/ for more info.
+ *
+ * @link https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax
+ * @link https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
+ */
+
+/* BEGIN: Containers */
+html,
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+/* END: Containers */
+
+/* BEGIN: Alerts (including session messages) */
+.alert {
+  padding: 8px 16px;
+}
+.alert .btn-close {
+  font-size: 0.8em;
+  padding: 1.2em;
+}
+/* END: Alerts */
+
+/* BEGIN: Forms */
+form > label {
+  font-size: 0.85em;
+  font-weight: bold;
+}
+/* END: Forms */
+
+/* BEGIN: Icons & Logo */
+.icon {
+  height: 24px; /* multiple of 8 */
+  width: 24px;
+}
+
+.logo {
+  width: 240px;
+}
+/* END: Icons & Logo */
+
+/* BEGIN: Navigation (includes links & breadcrumbs) */
+a {
+  color: blue;
+  text-decoration: none;
+}
+a:hover {
+  color: magenta;
+}
+/* END: Navigation */
+
+/* BEGIN: Utility Classes */
+.clickable {
+  cursor: pointer; /* adding role="button" to an element will change the cursor to pointer also but not guaranteed */
+}
+/* END: Utility Classes */

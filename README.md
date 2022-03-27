@@ -1,2 +1,1 @@
-# simple-ui-templating
-Simple UI Templating
+# Simple UI Templating
