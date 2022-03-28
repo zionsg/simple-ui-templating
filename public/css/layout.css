@@ -30,6 +30,7 @@ body {
 }
 /* END: Containers */
 
+
 /* BEGIN: Alerts (including session messages) */
 .alert {
   padding: 8px 16px;
@@ -40,12 +41,14 @@ body {
 }
 /* END: Alerts */
 
+
 /* BEGIN: Forms */
 form > label {
   font-size: 0.85em;
   font-weight: bold;
 }
 /* END: Forms */
+
 
 /* BEGIN: Icons & Logo */
 .icon {
@@ -58,6 +61,7 @@ form > label {
 }
 /* END: Icons & Logo */
 
+
 /* BEGIN: Navigation (includes links & breadcrumbs) */
 a {
   color: blue;
@@ -67,6 +71,16 @@ a:hover {
   color: magenta;
 }
 /* END: Navigation */
+
+
+/* BEGIN: Text */
+code {
+  padding: 2px;
+  color: #c7254e;
+  background-color: #f9f2f4;
+}
+/* END: Text */
+
 
 /* BEGIN: Utility Classes */
 .clickable {
