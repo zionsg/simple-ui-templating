@@ -34,7 +34,7 @@ if (!isset($sharedTemplateVariables)) {
         ]
     ];
 
-    extract($sharedTemplateVariables); // extract only the 1st time that this file is include
+    extract($sharedTemplateVariables); // extract only the 1st time that this file is included
 }
 
 /**
