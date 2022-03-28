@@ -17,7 +17,8 @@ if (!isset($sharedTemplateVariables)) {
     /**
      * Shared template variables that are passed to all views
      *
-     * Modify this as needed.
+     * Modify this as needed. To access in view template, just use the variable
+     * name, e.g. `echo $user['name'];`.
      *
      * @var array
      */
@@ -28,9 +29,7 @@ if (!isset($sharedTemplateVariables)) {
         /** @var array Record for current logged in user. */
         'user' => [
             'id' => 1,
-            'name' => 'Foo Bar',
-            'username' => 'foo.bar',
-            'role_name' => 'Admin',
+            'name' => 'elePHPant',
         ]
     ];
 
