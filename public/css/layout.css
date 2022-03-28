@@ -47,6 +47,12 @@ form > label {
   font-size: 0.85em;
   font-weight: bold;
 }
+
+.form-control-plaintext[disabled],
+.form-control-plaintext[readonly] {
+  background: none;
+  border: none;
+}
 /* END: Forms */
 
 
