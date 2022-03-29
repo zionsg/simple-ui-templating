@@ -1,6 +1,6 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/src/functions.php'; ?>
 
-<!-- This is just a form, not a page, hence layout view template not rendered -->
+<!-- This is just a widget, not a page, hence not rendered in layout view template -->
 <section data-render-id="<?= $renderId ?>" class="row vh-100 justify-content-center align-items-center">
   <div class="col-12 col-sm-6 col-md-3 col-xl-2">
     <div class="text-center mb-3">

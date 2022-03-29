@@ -5,4 +5,4 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/src/functions.php'; ?>
 
 <!-- All pages, including this index page, will render layout view template -->
-<?= render('layout.php', ['body' => render('form-login.php')]) ?>
+<?= render('layout.php', ['body' => render('widget-login-form.php')]) ?>
