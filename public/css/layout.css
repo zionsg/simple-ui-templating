@@ -62,7 +62,9 @@ form > label {
   width: 24px;
 }
 
-.logo {
+.logo { /* using SVG for logo hence the padding to put space between text in logo and edges of logo */
+  border-radius: 0.5em;
+  padding: 1em;
   width: 240px;
 }
 /* END: Icons & Logo */

@@ -14,10 +14,20 @@
   </head>
 
   <body>
-    <div data-render-id="<?= $renderId ?>" class="container-fluid">
-      <div>Layout View Template: <?= ($isAdmin ? 'Is Admin' : 'Not Admin') ?></div>
+    <main data-render-id="<?= $renderId ?>" class="container-fluid">
+      <div class="text-end">Layout View Template: <?= ($isAdmin ? 'Is Admin' : 'Not Admin') ?></div>
 
       <?= $body ?>
-    </div>
+    </main>
+
+    <script src="/public/vendor/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            // Enable Bootstrap tooltips site-wide
+            Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]')).map((tooltipElement) => {
+                return new bootstrap.Tooltip(tooltipElement);
+            });
+        })();
+    </script>
   </body>
 </html>

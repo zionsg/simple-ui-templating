@@ -5,4 +5,4 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/src/functions.php'; ?>
 
 <!-- Render layout view template -->
-<?= render('layout.php', ['body' => 'Hello World!']) ?>
+<?= render('layout.php', ['body' => render('login-form.php')]) ?>

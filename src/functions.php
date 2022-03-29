@@ -23,6 +23,9 @@ if (!isset($sharedTemplateVariables)) {
      * @var array
      */
     $sharedTemplateVariables = [
+        /** @var string CSRF token for forms. See https://stackoverflow.com/a/25672573 plus its comment on PHPMailer. */
+        'csrfToken' => base64_encode(random_bytes(32)),
+
         /** @var bool Whether the query param `admin=1` is set in the url. */
         'isAdmin' => (1 === intval($_GET['admin'] ?? 0)) ? true : false,
 
@@ -48,7 +51,7 @@ if (!function_exists('render')) {
      *
      * @param string viewPath Path to view template file, relative to root directory of web server.
      * @param array templateVariables Template variables to pass to view template.
-     * @return void
+     * @return string
      */
     function render($viewPath, $templateVariables = [])
     {
@@ -70,6 +73,10 @@ if (!function_exists('render')) {
         //     $body = 'hello';
         //     render('view.php', ['body' => 'bye']); // "bye" is rendered
         //     echo $body; // "hello" is rendered
+        ob_start();
         include $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . $viewPath;
+        $output = ob_get_clean();
+
+        return $output;
     }
 }

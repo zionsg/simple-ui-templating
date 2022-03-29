@@ -4,7 +4,7 @@
  * Usage:
  *     <script src="/public/js/utils.js"></script> <!-- should be loaded in <head> to be available to all views -->
  *     <script>
- *         let [color, background] = utils.getRandomColors();
+ *         let colors = utils.getRandomColors();
  *     </script>
  */
 
