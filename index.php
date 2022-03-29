@@ -1,4 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/src/functions.php'; ?>
+<?php include __DIR__ . '/src/functions.php'; ?>
 
 <!--
   This is the index page for the entire website, i.e. its entrypoint, similar to index.html.

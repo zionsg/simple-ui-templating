@@ -1,4 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/src/functions.php'; ?>
+<?php include __DIR__ . '/src/functions.php'; ?>
 
 <!--
   Template for rendering content into 3 panels: left, main, right

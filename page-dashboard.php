@@ -1,4 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/src/functions.php'; ?>
+<?php include __DIR__ . '/src/functions.php'; ?>
 
 <!-- Capture HTML in template variable to be passed to rendering of layout view template -->
 <?php ob_start(); ?>
@@ -26,7 +26,8 @@ echo render('layout.php', [
         'contentLeftHtml' => '
             <h2>Left Panel</h2>
             There are actually 3 panels - the right panel is only shown when <code>?admin=1</code>
-            is appended to the browser url to simulate an admin login.
+            is appended to the browser url to simulate an admin login (only works when running
+            on localhost server, not in static HTML webpage).
         ',
         'contentMainHtml' => $contentMainHtml,
         'contentRightHtml' =>

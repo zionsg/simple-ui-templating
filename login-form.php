@@ -1,4 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/src/functions.php'; ?>
+<?php include __DIR__ . '/src/functions.php'; ?>
 
 <!-- This is just a form, not a page, hence not rendered in layout view template -->
 <section data-render-id="<?= $renderId ?>" class="row vh-100 justify-content-center align-items-center">

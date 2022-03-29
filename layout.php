@@ -1,4 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/src/functions.php'; ?>
+<?php include __DIR__ . '/src/functions.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

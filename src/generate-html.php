@@ -6,24 +6,32 @@
  * A folder will be created in the root directory to store the output.
  */
 
-ini_set('allow_url_fopen', 'on'); // required for file_get_contents() to work with localhost url
-
-$outputDir = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'html-' . microtime(true);
+$outputDir = __DIR__ . '/../html-' . microtime(true);
 $result = mkdir($outputDir, 0700);
 if (!$result) {
     echo "Unable to create directory ${outputDir} to store generated HTML webpages.";
     return;
 }
 
-// @todo file_get_contents() seem to have issues with localhost URLs. To try cURL instead.
+// file_get_contents() seems to have issues with localhost URLs, cURL requires additional libraries,
+// hence use include()
 $fileCnt = 0;
-foreach (glob($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . '*.php') as $filePath) {
-    $filename = basename($filePath);
-    $output = file_get_contents("http://{$_SERVER['SERVER_NAME']}:{$_SERVER['SERVER_PORT']}/{$filename}");
+foreach (glob(__DIR__ . '/../*.php') as $filePath) {
+    ob_start();
+    include $filePath;
+    $output = ob_get_clean();
+
+    // Replace /public/ with ../public, .php with .html in generated HTML webpages
+    // This does not handle url() in linked CSS stylesheets or localhost urls in JS scripts
+    $output = preg_replace(
+        ['/\\/public\\//', '/\\.php/'],
+        ['../public/', '.html'],
+        $output
+    );
 
     $newFilename = $outputDir . DIRECTORY_SEPARATOR . basename($filePath, '.php') . '.html';
     file_put_contents($newFilename, $output);
     $fileCnt++;
 }
 
-echo "Generated {$fileCnt} HTML webpages and stored in {$outputDir}";
+echo "Generated {$fileCnt} HTML webpages and stored in <code>{$outputDir}</code>.";
