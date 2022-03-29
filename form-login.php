@@ -1,5 +1,6 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/src/functions.php'; ?>
 
+<!-- This is just a form, not a page, hence layout view template not rendered -->
 <section data-render-id="<?= $renderId ?>" class="row vh-100 justify-content-center align-items-center">
   <div class="col-12 col-sm-6 col-md-3 col-xl-2">
     <div class="text-center mb-3">
@@ -8,7 +9,7 @@
     </div>
 
     <!-- Neither username or password is highlighted when there is an error to prevent guessing attacks -->
-    <form method="POST" action="dashboard.php">
+    <form method="POST" action="page-dashboard.php">
       <div class="input-group">
         <span class="input-group-text font-monospace">Username</span>
         <input name="username" required autofocus type="text" class="form-control"
