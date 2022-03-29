@@ -24,9 +24,23 @@
 html,
 body {
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
   padding: 0;
+}
+
+.panel {
+  border: 1px solid black;
+  border-radius: 0.5em;
+}
+.panel-left {
+  border-color: red;
+}
+.panel-main {
+  border-color: green;
+}
+.panel-right {
+  border-color: blue;
 }
 /* END: Containers */
 

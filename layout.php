@@ -15,7 +15,7 @@
 
   <body>
     <main data-render-id="<?= $renderId ?>" class="container-fluid">
-      <div class="text-end">Layout View Template: <?= ($isAdmin ? 'Is Admin' : 'Not Admin') ?></div>
+      <div class="text-end"><p>Layout View Template: <?= ($isAdmin ? 'Is Admin' : 'Not Admin') ?></p></div>
 
       <?= $body ?>
     </main>
