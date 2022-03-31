@@ -47,8 +47,7 @@ This, however, requires the use of [PHP](https://en.wikipedia.org/wiki/PHP).
       Visual Studio first. The link is provided on the left panel, e.g. https://aka.ms/vs/16/release/VC_redist.x64.exe
     + Open the command prompt by pressing Win + R and typing "cmd", or right-clicking the Start Menu
       button and typing "cmd".
-    + Go to the folder where PHP is downloaded to and type "php --version"
-      to see if it works.
+    + Go to the folder where PHP is downloaded to and type `php --version` to see if it works.
     + Add the folder for PHP to the Windows `PATH` environment variable so that the `php` command
       can be run anywhere, e.g. by running `setx PATH "C:\Users\Me\Downloads\php;%PATH%"`.
       Run `echo %PATH%` to view the current path.
@@ -57,12 +56,12 @@ This, however, requires the use of [PHP](https://en.wikipedia.org/wiki/PHP).
     + To install it, go to https://www.php.net/manual/en/install.macosx.packages.php and follow
       the instructions here.
     + Open the terminal by pressing Cmd + Space and typing "terminal".
-    + Type "php --version" to see if it works.
+    + Type `php --version` to see if it works.
 - Linux / UNIX:
     + The instructions here use Ubuntu as an example.
     + Go to https://ubuntu.com/server/docs/programming-php and follow the instructions there.
     + Open the terminal. If using Ubuntu Desktop, press Ctrl + Alt + T.
-    + Type "php --version" to see if it works.
+    + Type `php --version` to see if it works.
 
 ## Usage
 - Download the zip file for this repository by clicking on the "Code" button. If you are familiar
