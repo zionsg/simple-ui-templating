@@ -3,11 +3,15 @@
 This simple project was done up to aid web designers in using templates for UI mockup webpages.
 Typically, for a website with 20 pages, the designer may come up with 20 static HTML webpage files,
 one for each page. Common HTML code such as stylesheets in `<head>`, navigation and forms are copied
-and pasted across all webpages, making updating onerous.
+and pasted across all webpages, making updating onerous and error-prone.
 
 One way would be to use templates, i.e. put the common HTML code into separate files and import them
 into each webpage. That way, if there are any changes to the common HTML code, only the template
 file needs to be updated, instead of updating all the copied/pasted code across all the webpages.
+
+The designer gets to reduce boilerplate HTML code, the developer can refer to the template files
+instead of sifting thru static HTML to extract out individual sections, and the client is still able
+to view static HTML webpage mockups generated from the template files.
 
 This, however, requires the use of [PHP](https://en.wikipedia.org/wiki/PHP).
 
@@ -21,15 +25,15 @@ This, however, requires the use of [PHP](https://en.wikipedia.org/wiki/PHP).
   [HTML Modules](https://github.com/WICG/webcomponents/blob/gh-pages/proposals/html-modules-explainer.md)
   extension, but it's still [not available](https://chromestatus.com/feature/4854408103854080)
   as of 2022.
-- The only way to use templates is to use server-side code to combine templates, since there is no
-  client-side support. This involves running a local web server on the computer to serve the files.
-  A variety of programming languages can be used, but by far, PHP is the easiest for a
-  non-developer, i.e. the web designer, to install and use.
+- The only way to use templates is to use server-side includes to combine template files, since
+  since there is no client-side support. This involves running a local web server on the computer
+  to serve the files. A variety of programming languages can be used, but by far, PHP is the easiest
+  for a non-developer, i.e. the web designer, to install and use.
     + PHP: Has an in-built webserver, i.e. `php -S localhost:8080`. Has in-built templating as it
       was designed for web development, e.g. `<div><?= time() ?></div>`.
     + Node.js: Need to install NPM package in order to run a web server,
       e.g. `npm install -g http-server`. Need to install NPM package for the templating engine,
-      e.g. `mustache`.
+      e.g. `npm install mustache`.
     + Python: Has an in-built webserver, i.e. `python3 -m http.server`. Need to install templating
       engine, e.g. `pip install Jinja2`.
 
@@ -45,6 +49,9 @@ This, however, requires the use of [PHP](https://en.wikipedia.org/wiki/PHP).
       button and typing "cmd".
     + Go to the folder where PHP is downloaded to and type "php --version"
       to see if it works.
+    + Add the folder for PHP to the Windows `PATH` environment variable so that the `php` command
+      can be run anywhere, e.g. by running `setx PATH "C:\Users\Me\Downloads\php;%PATH%"`.
+      Run `echo %PATH%` to view the current path.
 - macOS:
     + PHP is bundled with macOS since macOS X (10.0.0) prior to macOS Monterey (12.0.0).
     + To install it, go to https://www.php.net/manual/en/install.macosx.packages.php and follow
@@ -58,7 +65,8 @@ This, however, requires the use of [PHP](https://en.wikipedia.org/wiki/PHP).
     + Type "php --version" to see if it works.
 
 ## Usage
-- Download the zip file for this repository by clicking on the "Code" button.
+- Download the zip file for this repository by clicking on the "Code" button. If you are familiar
+  with Git, you may clone the repository instead.
 - Unzip the contents, e.g. to `C:\Users\Me\Downloads\demo` folder.
 - Open the terminal or command prompt, go to the folder (e.g. `cd C:\Users\Me\Download\demo`) and
   type `php -S localhost:8080`. This folder is the root directory of the web server.
