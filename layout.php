@@ -23,9 +23,11 @@
     <script src="/public/vendor/bootstrap.bundle.min.js"></script>
     <script>
         (function () {
-            // Enable Bootstrap tooltips site-wide
-            Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]')).map((tooltipElement) => {
-                return new bootstrap.Tooltip(tooltipElement);
+            window.addEventListener('DOMContentLoaded', (event) => {
+                // Enable Bootstrap tooltips site-wide
+                Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]')).map((tooltipElement) => {
+                    return new bootstrap.Tooltip(tooltipElement);
+                });
             });
         })();
     </script>
