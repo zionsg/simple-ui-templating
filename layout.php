@@ -14,11 +14,19 @@
   </head>
 
   <body>
-    <main data-render-id="<?= $renderId ?>" class="container-fluid">
-      <div class="text-end"><p>Layout View Template: <?= ($isAdmin ? 'Is Admin' : 'Not Admin') ?></p></div>
+    <div class="container">
+      <header>
+        <?= ('/index.php' === $_SERVER['PHP_SELF'] ? '' : render('pagination.php')) ?>
+      </header>
 
-      <?= $body ?>
-    </main>
+      <main data-render-id="<?= $renderId ?>">
+        <?= $body ?>
+      </main>
+
+      <footer class="my-5">
+        <div class="text-end"><i>Layout View Template: <?= ($isAdmin ? 'Is Admin' : 'Not Admin') ?></i></div>
+      </footer>
+    </div>
 
     <script src="/public/vendor/bootstrap.bundle.min.js"></script>
     <script>

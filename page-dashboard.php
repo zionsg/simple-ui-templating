@@ -5,17 +5,13 @@
   <div>
     <h1 class="text-center">Welcome Back <?= $user['name']; ?>!</h1>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dictum massa eu rhoncus accumsan.
-      Curabitur ultricies elit eu dignissim elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-      Maecenas dictum pulvinar posuere. Donec ut urna dignissim, lobortis elit at, consequat erat.
-      Cras urna magna, mollis vel tincidunt in, tempor ac massa. Cras egestas in tellus vitae aliquam.
-      Aenean elementum lectus ut lectus varius, ut molestie nunc sollicitudin. Donec sed commodo augue.
-      Vestibulum maximus in nisl ac faucibus. Sed sit amet arcu sed lacus fermentum feugiat.
+      The alignment and order of the 3 columns in the pagination at the top of the page is
+      different for mobile and desktop - try resizing the browser.
     </p>
-    <p class="text-center"><i>
+    <p class="text-center">
       This main content panel will automatically take up the remaining width if the left and/or the
       right panels are removed.
-    </i></p>
+    </p>
   </div>
 <?php $contentMainHtml = ob_get_clean(); ?>
 

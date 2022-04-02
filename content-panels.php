@@ -13,7 +13,7 @@
 -->
 <div class="row">
   <?php if ($contentLeftHtml): ?>
-    <section class="col-12 col-md-2 order-2 order-md-1 panel panel-left">
+    <section class="col-12 order-2 col-md-2 order-md-1 panel panel-left">
       <div class="sticky-top">
         <?= $contentLeftHtml ?>
         <p>&nbsp;</p>
@@ -21,13 +21,13 @@
     </section>
   <?php endif; ?>
 
-  <section class="col-12 col-md order-1 order-md-2 panel panel-main">
+  <section class="col-12 order-1 col-md order-md-2 panel panel-main">
     <?= $contentMainHtml ?>
     <p>&nbsp;</p>
   </section>
 
   <?php if ($contentRightHtml): ?>
-    <section class="col-12 col-md-2 order-3 order-md-3 panel panel-right">
+    <section class="col-12 order-3 col-md-2 order-md-3 panel panel-right">
       <div class="sticky-top">
         <?= $contentRightHtml ?>
         <p>&nbsp;</p>
