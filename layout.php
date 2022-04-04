@@ -1,4 +1,7 @@
-<?php include __DIR__ . '/src/functions.php'; ?>
+<?php
+include __DIR__ . '/src/functions.php';
+$isIndexPage = ('/index.php' === $_SERVER['PHP_SELF']); // vary layout if it is index page
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,9 +17,9 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="<?= ($isIndexPage ? 'container-fluid' : 'container') ?>">
       <header>
-        <?= ('/index.php' === $_SERVER['PHP_SELF'] ? '' : render('pagination.php')) ?>
+        <?= ($isIndexPage ? '' : render('pagination.php')) ?>
       </header>
 
       <main data-render-id="<?= $renderId ?>">

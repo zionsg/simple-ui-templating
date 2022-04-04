@@ -2,13 +2,14 @@
 
 <!-- Capture HTML in template variable to be passed to rendering of layout view template -->
 <?php ob_start(); ?>
-  <div>
-    <h1 class="text-center">Welcome Back <?= $user['name']; ?>!</h1>
+  <div class="text-center">
+    <h1>Welcome Back <?= $user['name']; ?>!</h1>
     <p>
       The alignment and order of the 3 columns in the pagination at the top of the page is
-      different for mobile and desktop - try resizing the browser.
+      different for mobile and desktop (page links changes into page dropdown also) - try resizing
+      the browser.
     </p>
-    <p class="text-center">
+    <p>
       This main content panel will automatically take up the remaining width if the left and/or the
       right panels are removed.
     </p>
