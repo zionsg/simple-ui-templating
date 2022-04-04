@@ -8,7 +8,7 @@
   <div class="col-6 order-2 text-end col-sm-4 order-sm-2 text-sm-center">
     <div class="d-block d-sm-none"> <!-- page dropdown shown only on mobile or small viewport -->
       <label>Page</label>
-      <select class="form-select w-auto form-check-inline">
+      <select class="form-select w-auto d-inline">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -28,7 +28,7 @@
 
   <div class="col-6 order-1 text-start col-sm-4 order-sm-3 text-sm-end">
     <label>Items Per Page</label>
-    <select class="form-select w-auto form-check-inline">
+    <select class="form-select w-auto d-inline">
       <option>25</option>
       <option>50</option>
       <option>100</option>
