@@ -15,6 +15,11 @@ to view static HTML webpage mockups generated from the template files.
 
 This, however, requires the use of [PHP](https://en.wikipedia.org/wiki/PHP).
 
+## Sections
+- [Why PHP?](#why-php)
+- [Installing PHP](#installing-php)
+- [Usage](#usage)
+
 ## Why PHP?
 - HTML Imports were introduced around 2013/2014, and allowed developers to import HTML templates,
   e.g. `<link rel="import" href="/path/to/imports/stuff.html">`, but have been deprecated and
@@ -62,6 +67,10 @@ This, however, requires the use of [PHP](https://en.wikipedia.org/wiki/PHP).
     + Go to https://ubuntu.com/server/docs/programming-php and follow the instructions there.
     + Open the terminal. If using Ubuntu Desktop, press Ctrl + Alt + T.
     + Type `php --version` to see if it works.
+- Docker:
+    + If you wish to use Docker to run PHP instead of installing it on your computer, take a look
+      at https://github.com/serversideup/docker-php which provides production-ready Docker images
+      for PHP optimized for Laravel, WordPress and more.
 
 ## Usage
 - Download the zip file for this repository by clicking on the "Code" button. If you are familiar
