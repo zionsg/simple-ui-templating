@@ -4,7 +4,7 @@
  * Prescribed format/ordering of CSS:
  *   - With the exception of "Containers" which is placed first, sections
  *     should be ordered alphabetically for easier searching.
- *   - Begin and end each section with comments containing the section name,
+ *   - Begin and close each section with comments containing the section name,
  *     e.g. Forms, Navigation, etc.
  *   - Within each section, the rules (selector + declaration group) should be
  *     ordered according to CSS specificity with type selectors (e.g. div)
@@ -42,7 +42,7 @@ body {
 .panel-right {
   border-color: blue;
 }
-/* END: Containers */
+/* CLOSE: Containers */
 
 
 /* BEGIN: Alerts (including session messages) */
@@ -53,7 +53,7 @@ body {
   font-size: 0.8em;
   padding: 1.2em;
 }
-/* END: Alerts */
+/* CLOSE: Alerts */
 
 
 /* BEGIN: Forms */
@@ -67,7 +67,7 @@ form > label {
   background: none;
   border: none;
 }
-/* END: Forms */
+/* CLOSE: Forms */
 
 
 /* BEGIN: Icons & Logo */
@@ -81,7 +81,7 @@ form > label {
   padding: 1em;
   width: 240px;
 }
-/* END: Icons & Logo */
+/* CLOSE: Icons & Logo */
 
 
 /* BEGIN: Navigation (includes links & breadcrumbs) */
@@ -92,7 +92,7 @@ a {
 a:hover {
   color: magenta;
 }
-/* END: Navigation */
+/* CLOSE: Navigation */
 
 
 /* BEGIN: Text */
@@ -101,11 +101,11 @@ code {
   color: #c7254e;
   background-color: #f9f2f4;
 }
-/* END: Text */
+/* CLOSE: Text */
 
 
 /* BEGIN: Utility Classes */
 .clickable {
   cursor: pointer; /* adding role="button" to an element will change the cursor to pointer also but not guaranteed */
 }
-/* END: Utility Classes */
+/* CLOSE: Utility Classes */
