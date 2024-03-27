@@ -34,8 +34,8 @@ This, however, requires the use of [PHP](https://en.wikipedia.org/wiki/PHP).
   there is no client-side support. This involves running a local web server on the computer
   to serve the files. A variety of programming languages can be used, but by far, PHP is the
   easiest for a non-developer, i.e. the web designer, to install and use.
-    + PHP: Has an in-built webserver, i.e. `php -S localhost:8080`. Has in-built templating as it
-      was designed for web development, e.g. `<div><?= time() ?></div>`.
+    + PHP: Has an in-built webserver, i.e. `php -S localhost:8080`. Has an in-built templating engine
+      as it was designed for web development, e.g. `<div><?= time() ?></div>`.
     + Node.js: Need to install NPM package in order to run a web server,
       e.g. `npm install -g http-server`. Need to install NPM package for the templating engine,
       e.g. `npm install mustache`.
